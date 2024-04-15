@@ -1,0 +1,29 @@
+app:
+  environment: dev
+  name: jukebox
+
+server:
+  port: 8080
+  readTimeout: 10s
+  writeTimeout: 10s
+  profilerPort: 6060
+
+database:
+  hostName: localhost
+  port: 5432
+  userName: postgres
+  password: pwd
+  databaseName: postgres
+  schema: public
+  queryLocation: "/internal/daos/database/queries/"
+  databaseRestrictions:
+    maxOpenConnections: 100
+    maxIdleConnections: 10
+    maxConnLifetime: 30
+
+dataRestrictions:
+  minAlbumCharacters: 5
+  minMusicianCharacters: 3
+  priceRange:
+    minimumPrice: 100
+    maximumPrice: 1000
