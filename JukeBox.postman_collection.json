@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "792d62c2-29f3-41a2-aa7d-7cac0c139be3",
+		"name": "JukeBox",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34262512"
+	},
+	"item": [
+		{
+			"name": "UpsertAlbum",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{host_name}}/jukebox/v1/album",
+					"host": [
+						"{{host_name}}"
+					],
+					"path": [
+						"jukebox",
+						"v1",
+						"album"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpsertMusician",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{host_name}}/jukebox/v1/musician",
+					"host": [
+						"{{host_name}}"
+					],
+					"path": [
+						"jukebox",
+						"v1",
+						"musician"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAlbums",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host_name}}/jukebox/v1/albums",
+					"host": [
+						"{{host_name}}"
+					],
+					"path": [
+						"jukebox",
+						"v1",
+						"albums"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAlbumsByMusicianName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host_name}}/jukebox/v1/albums?musician_name=Chester Bennington",
+					"host": [
+						"{{host_name}}"
+					],
+					"path": [
+						"jukebox",
+						"v1",
+						"albums"
+					],
+					"query": [
+						{
+							"key": "musician_name",
+							"value": "Chester Bennington"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetMusiciansByAlbum",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host_name}}/jukebox/v1/musicians?album_name=Linkin Park",
+					"host": [
+						"{{host_name}}"
+					],
+					"path": [
+						"jukebox",
+						"v1",
+						"musicians"
+					],
+					"query": [
+						{
+							"key": "album_name",
+							"value": "Linkin Park"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
